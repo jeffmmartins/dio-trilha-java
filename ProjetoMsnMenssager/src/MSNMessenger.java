@@ -2,18 +2,21 @@ import javax.sound.midi.Soundbank;
 
 public class MSNMessenger {
     public void enviarMensagem(){
+        // encapsulando metodos
+        validarConectandoInternet();
         System.out.println("Enviado mensagem");
+        salvarHistoricoMensagem();
     }
 
     public void receberMensage(){
         System.out.println("Recebendo mensageem");
     }
 
-    public void validarConectandoInternet(){
+    private void validarConectandoInternet(){
         System.out.println("Conectando Internet");
     }
 
-    public void salvarHistoricoMensagem(){
+    private void salvarHistoricoMensagem(){
         System.out.println("Salvando Mensagem");
     }
 
