@@ -5,5 +5,13 @@ public class Main {
         MSNMessenger msn = new MSNMessenger();
         msn.enviarMensagem();
         msn.receberMensage();
+
+        Facebook mensagem = new Facebook();
+        mensagem.enviarMensagem();
+        mensagem.receberMensage();
+
+        Telegram mensagem = new Telegram();
+        mensagem.enviarMensagem();
+        mensagem.receberMensage();
     }
 }
