@@ -1,6 +1,9 @@
-public class Facebook extends ServicoMensagemInstantanea{
+package apps;
+
+public class Facebook extends ServicoMensagemInstantanea {
     @Override
     public void enviarMensagem() {
+        validandoInternet();
         System.out.println("Enviando mensagem facebook");
     }
 

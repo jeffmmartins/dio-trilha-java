@@ -1,10 +1,11 @@
-import javax.sound.midi.Soundbank;
+package apps;
 
 public class MSNMessenger extends ServicoMensagemInstantanea {
 
 
     @Override
     public void enviarMensagem() {
+        validandoInternet();
         System.out.println("Enviando mensagem msn");
     }
 

@@ -1,3 +1,5 @@
+package apps;
+
 public abstract class ServicoMensagemInstantanea {
 
 
@@ -11,4 +13,8 @@ public abstract class ServicoMensagemInstantanea {
 
     public abstract void enviarMensagem();
     public abstract void receberMensage();
+
+    protected void validandoInternet(){
+        System.out.println("Validando a internet");
+    }
 }
