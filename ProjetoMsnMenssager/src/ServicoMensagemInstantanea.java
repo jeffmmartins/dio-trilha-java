@@ -1,14 +1,5 @@
-public class ServicoMensagemInstantanea {
-    public void enviarMensagem(){
-        // encapsulando metodos
-        validarConectandoInternet();
-        System.out.println("Enviado mensagem");
-        salvarHistoricoMensagem();
-    }
+public abstract class ServicoMensagemInstantanea {
 
-    public void receberMensage(){
-        System.out.println("Recebendo mensageem");
-    }
 
     private void validarConectandoInternet(){
         System.out.println("Conectando Internet");
@@ -17,4 +8,7 @@ public class ServicoMensagemInstantanea {
     private void salvarHistoricoMensagem(){
         System.out.println("Salvando Mensagem");
     }
+
+    public abstract void enviarMensagem();
+    public abstract void receberMensage();
 }

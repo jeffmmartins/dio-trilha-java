@@ -10,8 +10,8 @@ public class Main {
         mensagem.enviarMensagem();
         mensagem.receberMensage();
 
-        Telegram mensagem = new Telegram();
-        mensagem.enviarMensagem();
-        mensagem.receberMensage();
+        Telegram texto = new Telegram();
+        texto.enviarMensagem();
+        texto.receberMensage();
     }
 }
