@@ -2,16 +2,19 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        MSNMessenger msn = new MSNMessenger();
-        msn.enviarMensagem();
-        msn.receberMensage();
+        ServicoMensagemInstantanea smi = null;
 
-        Facebook mensagem = new Facebook();
-        mensagem.enviarMensagem();
-        mensagem.receberMensage();
+        String appescolhido = "tlg";
 
-        Telegram texto = new Telegram();
-        texto.enviarMensagem();
-        texto.receberMensage();
+        if (appescolhido.equals("msn"))
+            smi = new MSNMessenger();
+        else if (appescolhido.equals("tlg")) {
+            smi = new Telegram();
+        } else if (appescolhido.equals("faceebook"))
+            smi = new Facebook();
+
+        smi.enviarMensagem();
+        smi.receberMensage();
+
     }
 }
