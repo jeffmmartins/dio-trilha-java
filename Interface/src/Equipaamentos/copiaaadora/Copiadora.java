@@ -1,4 +1,5 @@
 package Equipaamentos.copiaaadora;
 
-public class Copiadora {
+public interface Copiadora {
+    public void copiar();
 }
