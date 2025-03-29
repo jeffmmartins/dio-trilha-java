@@ -1,4 +1,5 @@
 package Equipaamentos.digitaalizadora;
 
-public class Digitalizadora {
+public interface Digitalizadora {
+    public void digitalizaar();
 }
