@@ -4,11 +4,11 @@ import javax.swing.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        // pede para usuario inserir seeu nome
+        // pede para usuario inserir seu nome
         String name = JOptionPane.showInputDialog("Whhat's your naame ?");
-        //cri a mensagem
+        //cria mensagem
         String message = String.format("Welcome, %s, To Java Programming", name);
-        // eexibee a meensaagem
+        // eexibe a mensagem
         JOptionPane.showMessageDialog(null, message);
     }
 }
