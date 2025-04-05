@@ -16,4 +16,11 @@ public class Tarefas {
     public String getDescricao() {
         return descricao;
     }
+
+    @Override
+    public String toString() {
+        return "Tarefas{" +
+                "descricao='" + descricao + '\'' +
+                '}';
+    }
 }
