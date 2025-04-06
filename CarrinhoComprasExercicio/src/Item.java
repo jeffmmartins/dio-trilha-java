@@ -1,7 +1,7 @@
 public class Item {
     private String nome;
     private double preco;
-    private int quaantidade;
+    private int quantidade;
 
 
     // construtor padrão;
@@ -9,10 +9,10 @@ public class Item {
 
     }
 
-    public Item(String nome, double preco, int quaantidade) {
+    public Item(String nome, double preco, int quantidade) {
         this.nome = nome;
         this.preco = preco;
-        this.quaantidade = quaantidade;
+        this.quantidade = quantidade;
     }
 
     public String getNome() {
@@ -23,16 +23,16 @@ public class Item {
         return preco;
     }
 
-    public int getQuaantidade() {
-        return quaantidade;
+    public int getQuantidade() {
+        return quantidade;
     }
 
     @Override
     public String toString() {
-        return "Item{" +
+        return "Produtos{" +
                 "nome='" + nome + '\'' +
                 ", preco=" + preco +
-                ", quaantidade=" + quaantidade +
+                ", quaantidade=" + quantidade +
                 '}';
     }
 }

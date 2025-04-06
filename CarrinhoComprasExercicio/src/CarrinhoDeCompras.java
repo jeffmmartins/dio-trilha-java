@@ -6,7 +6,9 @@ public class CarrinhoDeCompras {
     //atributo como list
     private List<Item> itensProduto;
 
-    public CarrinhoDeCompras(List<Item> itensProduto) {
+
+
+    public CarrinhoDeCompras() {
         //inicializando o itensprodutos com uma array vazio.
         this.itensProduto = new ArrayList<>();
     }
@@ -26,11 +28,17 @@ public class CarrinhoDeCompras {
         itensProduto.removeAll(remocaoItem);
     }
 
-    public int obterNumeroTotalTarefas(){
-        return itensProduto.size();
-    }
+   public void calcularValorTotal(){
+      double total = 0;
+     for (Item item : itensProduto){
+         double valor = item.getQuantidade() * item.getPreco();
+         total += valor;
+     }
+       System.out.println(total);
+   }
 
-    public void obterDescricoesTarefas(){
+    public void exibirItens(){
         System.out.println(itensProduto);
+
     }
 }
