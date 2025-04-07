@@ -11,6 +11,8 @@ public class Main {
             catalagoDeLivros.adicionarLivro("livro4", "Autor 4",2023 );
             catalagoDeLivros.adicionarLivro("livro5", "Autor 5",1994 );
 
-            catalagoDeLivros.pesquisarPorAutor("Autor 2");
+        System.out.println(catalagoDeLivros.pesquisarPorAutor("Autor 1"));
+        System.out.println(catalagoDeLivros.pesquisarPorIntervaloAnos(2020, 2022));
+        System.out.println(catalagoDeLivros.pesquisarPorTitulo("livro 1"));
     }
 }
