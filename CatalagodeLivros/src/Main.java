@@ -10,5 +10,7 @@ public class Main {
             catalagoDeLivros.adicionarLivro("livro3", "Autor 3",2022 );
             catalagoDeLivros.adicionarLivro("livro4", "Autor 4",2023 );
             catalagoDeLivros.adicionarLivro("livro5", "Autor 5",1994 );
+
+            catalagoDeLivros.pesquisarPorAutor("Autor 2");
     }
 }

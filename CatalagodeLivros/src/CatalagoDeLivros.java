@@ -15,18 +15,18 @@ public class CatalagoDeLivros {
     }
 
     // está como lista porque pode ter mais de um  livro por autor, então vai ter o retorno de lista;
-    public List<Livro> pesquisarPorAutor(String autor){
-        List<Livro> livroPorAutor = new ArrayList<>();
-        // verificando se a lista está vazia.
-        if (!listLivros.isEmpty()){
-            for (Livro l : listLivros){
-                if (l.getAutor().equalsIgnoreCase(autor)){
-                    // adicionando o livro na lista vazia: livroPorAutor
-                    livroPorAutor.add(l);
+    public List<Livro> pesquisarPorAutor(String autor) {
+        List<Livro> livrosPorAutor = new ArrayList<>();
+        if (!listLivros.isEmpty()) {
+            for (Livro l : listLivros) {
+                if (l.getAutor().equalsIgnoreCase(autor)) {
+                    livrosPorAutor.add(l);
                 }
             }
+            return livrosPorAutor;
+        } else {
+            throw new RuntimeException("A lista está vazia!");
         }
-        return livroPorAutor;
     }
 
     public List<Livro> pesquisarPorIntervaloAnos(int anoInicial, int anoFinal){

@@ -18,6 +18,10 @@ public class Livro {
         return autor;
     }
 
+    public void setAutor(String autor){
+        this.autor = autor;
+    }
+
     public int getAnoPublicacao() {
         return anoPublicacao;
     }
