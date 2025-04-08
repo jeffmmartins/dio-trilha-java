@@ -1,3 +1,5 @@
+import java.util.Comparator;
+
 public class Pessoa implements Comparable<Pessoa>{
     // atributos;
     private String nome;
@@ -36,4 +38,14 @@ public class Pessoa implements Comparable<Pessoa>{
     public int compareTo(Pessoa  o) {
         return Integer.compare(idade, o.getIdade());
     }
+}
+
+class CompartorPorAltura implements Comparator<Pessoa> {
+
+
+    @Override
+    public int compare(Pessoa p1, Pessoa p2) {
+        return 0;
+    }
+}
 }
