@@ -23,6 +23,12 @@ public class OrdenacaoPessoa {
         Collections.sort(pessoasPorIdade);
         return pessoasPorIdade;
     }
+
+    public List<Pessoa> ordenarPorAltura(){
+        List<Pessoa> pessoaPorAltura = new ArrayList<>(listpessoa);
+        Collections.sort(pessoaPorAltura, new CompartorPorAltura());
+        return pessoaPorAltura;
+    }
 }
 
 
