@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Convidado {
     //atributos
     private String nome;
@@ -14,6 +16,19 @@ public class Convidado {
 
     public int getConvite() {
         return convite;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Convidado convidado = (Convidado) o;
+        return getConvite() == convidado.getConvite();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(getConvite());
     }
 
     @Override
