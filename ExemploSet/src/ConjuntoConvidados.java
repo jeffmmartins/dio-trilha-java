@@ -22,7 +22,15 @@ public class ConjuntoConvidados {
                 convidadoParaRemover = c;
                 break;
             }
-
         }
+        convidadoSet.remove(convidadoParaRemover);
+    }
+
+    public int contarConvidados() {
+        return convidadoSet.size();
+    }
+
+    public void exibirConvidades() {
+        System.out.println(convidadoSet);
     }
 }
