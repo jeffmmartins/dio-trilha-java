@@ -15,26 +15,29 @@ public class ConjuntoPalavrasUnicas {
     }
 
     public void removerPalavra(String palavra){
-        if (!conjuntoPalavrasUnicasSet.isEmpty()){
-            if (conjuntoPalavrasUnicasSet.contains(palavra)){
+        if (!conjuntoPalavrasUnicasSet.isEmpty()) { //
+            if (conjuntoPalavrasUnicasSet.contains(palavra)) {
                 conjuntoPalavrasUnicasSet.remove(palavra);
-            }else {
+            } else {
                 System.out.println("Palavra não encontrada no conjunto");
-            }else {
+            }
+        }
+        else {
                 System.out.println("Conjunto vazio");
             }
         }
-    }
 
-    public boolean verificarPalavra(String palavra){
-        return conjuntoPalavrasUnicasSet.contains(palavra);
+    public boolean verificarPalavra(String palavra) {
+        conjuntoPalavrasUnicasSet.contains(palavra);
     }
 
     public void exibirPalavrasUnicas(){
         if (!conjuntoPalavrasUnicasSet.isEmpty()){
-            System.out.println(conjuntoPalavrasUnicasSet);
+            System.out.println();
         }else {
             System.out.println("Conjunto está vazio");
         }
     }
 }
+
+
