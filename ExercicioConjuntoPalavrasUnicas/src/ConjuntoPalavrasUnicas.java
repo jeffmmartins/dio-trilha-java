@@ -28,12 +28,13 @@ public class ConjuntoPalavrasUnicas {
         }
 
     public boolean verificarPalavra(String palavra) {
-        conjuntoPalavrasUnicasSet.contains(palavra);
+        return conjuntoPalavrasUnicasSet.contains(palavra);
+
     }
 
     public void exibirPalavrasUnicas(){
         if (!conjuntoPalavrasUnicasSet.isEmpty()){
-            System.out.println();
+            System.out.println(conjuntoPalavrasUnicasSet);
         }else {
             System.out.println("Conjunto está vazio");
         }

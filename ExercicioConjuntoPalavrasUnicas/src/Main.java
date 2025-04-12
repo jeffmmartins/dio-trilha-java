@@ -2,14 +2,32 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        ConjuntoPalavrasUnicas conjuntoPalavrasUnicas = new ConjuntoPalavrasUnicas();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        // Adicionando linguagens únicas ao conjunto
+        conjuntoPalavrasUnicas.adicionarPalavra("Java");
+        conjuntoPalavrasUnicas.adicionarPalavra("Python");
+        conjuntoPalavrasUnicas.adicionarPalavra("JavaScript");
+        conjuntoPalavrasUnicas.adicionarPalavra("Python");
+        conjuntoPalavrasUnicas.adicionarPalavra("C++");
+        conjuntoPalavrasUnicas.adicionarPalavra("Ruby");
+
+        // Exibindo as linguagens únicas no conjunto
+        conjuntoPalavrasUnicas.exibirPalavrasUnicas();
+
+        // Removendo uma linguagem do conjunto
+
+        conjuntoPalavrasUnicas.removerPalavra("Python");
+        conjuntoPalavrasUnicas.exibirPalavrasUnicas();
+        /*
+        // Removendo uma linguagem inexistente
+        conjuntoPalavrasUnicas.removerPalavra("Swift");
+
+        // Verificando se uma linguagem está no conjunto
+        System.out.println("A linguagem 'Java' está no conjunto? " + conjuntoPalavrasUnicas.verificarPalavra("Java"));
+        System.out.println("A linguagem 'Python' está no conjunto? " + conjuntoPalavrasUnicas.verificarPalavra("Python"));
+
+        // Exibindo as linguagens únicas atualizadas no conjunto
+        conjuntoPalavrasUnicas.exibirPalavrasUnicas();*/
     }
 }
