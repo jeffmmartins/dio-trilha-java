@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-public class ComparatorPorNome implements Comparator<Produto> {
+public class ComparatorPorPreco implements Comparator<Produto> {
 
     // é feito a comparação tipo double de dois precos;
     @Override
