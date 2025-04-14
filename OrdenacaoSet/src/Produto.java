@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Produto {
+public class Produto implements Comparable<Produto> {
     //atributos
     private long codigo;
     private String nome;
@@ -52,5 +52,10 @@ public class Produto {
                 ", preco=" + preco +
                 ", quantidade=" + quantidade +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Produto p) {
+        return nome.compareToIgnoreCase(p.getNome());
     }
 }
