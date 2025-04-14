@@ -30,6 +30,7 @@ public class Produto {
         return quantidade;
     }
 
+    //logica para comparar os produtos;
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
