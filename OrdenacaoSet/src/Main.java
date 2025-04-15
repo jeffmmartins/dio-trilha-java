@@ -2,14 +2,15 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        CadastroProdutos cadastroProdutos = new CadastroProdutos();
+
+        cadastroProdutos.adicionarProduto(1l,"produto5", 15d, 5);
+        cadastroProdutos.adicionarProduto(2l,"produto2", 20d, 10);
+        cadastroProdutos.adicionarProduto(1l,"produto4", 10d, 2);
+        cadastroProdutos.adicionarProduto(9l,"produto5", 2d, 2);
+
+        System.out.println(cadastroProdutos.exibirProdutosPorNome());
+        System.out.println(cadastroProdutos.exibirProdutosPorPreco());
     }
 }
