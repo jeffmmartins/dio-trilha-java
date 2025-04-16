@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class EstoqueProduto {
-    //atributos, codigo do tipo long;.
+    //atributos, codigo do tipo long, como se fosse uma identificação unica para o objeto produto;
     private Map<Long,Produto> estoqueProdutoMap;
 
     public EstoqueProduto() {
