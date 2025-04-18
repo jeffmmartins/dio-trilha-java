@@ -15,12 +15,18 @@ public class Main {
             }
         };*/
         //impplementando o consumer
-        numeros.stream().forEach(new Consumer<Integer>() {
+        /*numeros.stream().forEach(new Consumer<Integer>() {
             @Override
             public void accept(Integer n) {
                 if (n % 2 == 0){
                     System.out.println(n);
                 }
+            }
+        });*/
+
+        numeros.forEach(n -> {
+            if (n % 2 == 0){
+                System.out.println(n);
             }
         });
     }
