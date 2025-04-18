@@ -14,6 +14,18 @@ public class suplier {
                 .limit(5)
                 .collect(Collectors.toList());
 
+        List<String> listasaudacoes1 =  Stream.generate(new Supplier<String>() {
+            @Override
+            public String get() {
+                return "Seja bem vindo";
+            }
+        }).limit(5).collect(Collectors.toList());
+
+
+        List<String> listasaudacoes2 =  Stream.generate(() -> "Seja bem vindo"
+        ).limit(5).collect(Collectors.toList());
+
+
         listaSaudações.forEach(System.out::println);
     }
 }
