@@ -12,12 +12,18 @@ public class Main {
         List<Integer> numeros = Arrays.asList(1,2,3,4,5);
 
         //Usar Function com exppressão lambda para dobrar todos os números
-        Function<Integer,Integer> dobrar = numero -> numero * 2;
+        //Function<Integer,Integer> dobrar = numero -> numero * 2;
 
         //Usar função para dobrar todos os numeros no Stream e armazenar em outra lista
-        List<Integer> numerosDobrados = numeros.stream()
+        /*List<Integer> numerosDobrados = numeros.stream()
                 .map(dobrar)
                 .collect(Collectors.toList());
+        */
+        // outra forma
+        List<Integer> numerosDobrados = numeros.stream()
+                .map(n-> n*2)
+                        .collect(Collectors.toList());
+
 
         numerosDobrados.forEach(System.out::println);
     }
