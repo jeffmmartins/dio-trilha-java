@@ -13,11 +13,11 @@ public class SistemaMensagem implements CommandLineRunner {
 
     //aplicando o properties
 
-    @Value("$nome")
+    @Value("${nome}")
     private String nome;
-    @Value("$email")
+    @Value("${email}")
     private String email;
-    @Value("$numero")
+    @Value("${numero}")
     private List<Long> numero = new ArrayList<>(Arrays.asList(new Long[]{85997933289L}));
 
 
