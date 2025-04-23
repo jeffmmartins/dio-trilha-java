@@ -22,11 +22,13 @@ public class SistemaMensagem implements CommandLineRunner {
     //private List<Long> numero = new ArrayList<>(Arrays.asList(new Long[]{85997933289L}));
     @Autowired
     private Rementente rementente;
+    @Autowired
+    private Teste teste;
 
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("Mensagem enviada por: " + rementente.getNome() + " pro e-mail: " +
+        System.out.println("Mensagem enviada por: " + rementente.getNome() + " " + teste.getSobrenome() +" pro e-mail: " +
                 rementente.getEmail() + " Com telefone para contato " + rementente.getNumero() );
         System.out.println("Registro cadastrado");
     }
