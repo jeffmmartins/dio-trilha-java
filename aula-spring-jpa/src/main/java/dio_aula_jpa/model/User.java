@@ -1,13 +1,13 @@
-package Model;
-
+package dio_aula_jpa.model;
 import jakarta.persistence.*;
-
 @Entity
+@Table(name = "Users")
 public class User {
     @Id
-    // id gerenciado de forma automatica no banco, com estrutura de identificação.
+// id gerenciado de forma automatica no banco, com estrutura de identificação.
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id") // adicionando uma anotação adicional informando que o nome vai ter uma diferença com o atributo.
+    @Column(name = "user_id")
+    // adicionando uma anotação adicional informando que o nome vai ter uma diferença com o atributo.
     private Integer id;
     @Column(length = 50, nullable = false)
     private String name;
@@ -15,7 +15,6 @@ public class User {
     private String username;
     @Column(length = 100, nullable = false)
     private String password;
-
 
     public String getName() {
         return name;
