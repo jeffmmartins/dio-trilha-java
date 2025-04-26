@@ -14,6 +14,9 @@ public class StartApp implements CommandLineRunner {
         user.setName("Jefferson");
         user.setUsername("Jeff");
         user.setPassword("Dio");
+        user.setName("Vera");
+        user.setUsername("Vera");
+        user.setPassword("VMM");
 
         userRepository.save(user);
 
