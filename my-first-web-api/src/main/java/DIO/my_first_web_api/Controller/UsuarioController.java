@@ -3,14 +3,12 @@ package DIO.my_first_web_api.Controller;
 import DIO.my_first_web_api.Model.Usuario;
 import DIO.my_first_web_api.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequestMapping("/users") // todas a srequisições irao iniciar com users
 public class UsuarioController {
     @Autowired
     private UserRepository userRepository;
@@ -27,5 +25,10 @@ public class UsuarioController {
     @DeleteMapping("/users/{id}") // feito a simulação dentro do postman
     public void delete(@PathVariable("id") Integer id){
          userRepository.deleteById(id);
+    }
+
+    @PostMapping("/users")
+    public void postUser(@RequestBody Usuario usuario){
+        userRepository.save(usuario);
     }
 }
