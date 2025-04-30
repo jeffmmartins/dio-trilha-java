@@ -17,16 +17,25 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableGlobalMethodSecurity(prePostEnabled = true)// permite usar anotações como @PreAuthorize nos métodos para controlar quem pode acessá-los (exemplo: só administradores).
 public class WebSecurityConfig  {
 
+
+
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/").permitAll()
+                        .requestMatchers("/login").permitAll()
+                        .requestMatchers("/managers").hasRole("MANAGERS")
+                        .requestMatchers("/users").hasAnyRole("MANAGERS","USERS")
                         .anyRequest().authenticated()
                 )
                 .httpBasic(Customizer.withDefaults()); // para login via HTTP Basic
 
         return http.build();
     }
+
+
 
     @Bean
     public UserDetailsService userDetailsService() {
