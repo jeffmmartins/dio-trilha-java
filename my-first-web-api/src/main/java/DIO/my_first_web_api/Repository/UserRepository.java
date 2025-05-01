@@ -40,7 +40,4 @@ public class UserRepository {
         return new Usuario("gleyson", "password");
     }
 
-
-
-
 }
