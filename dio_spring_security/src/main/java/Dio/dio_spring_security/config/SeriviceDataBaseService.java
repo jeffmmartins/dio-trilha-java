@@ -18,9 +18,14 @@ public class SeriviceDataBaseService implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
     @Override
+
+    // O Spring chama esse método automaticamente quando alguém tenta fazer login
+    //esse metodo é uma interface do UserDetailsService
+    //carregar os dados de um usuário do banco de dados, com base no nome de usuário (username), na hora do login.
     public UserDetails loadUserByUsername(String username) {
         User userEntity = userRepository.findByUsername(username);
         if (userEntity == null) {
+            ///lança uma exceção
             throw new UsernameNotFoundException(username);
         }
         Set<GrantedAuthority> authorities = new HashSet<GrantedAuthority>();
