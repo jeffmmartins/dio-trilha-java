@@ -9,6 +9,8 @@ public class Main {
         singletonLazy = SingletonLazy.getInstance();
         System.out.println(singletonLazy);
 
+        SingletonLazyHolder singletonLazyHolder = SingletonLazyHolder.getInstance();
+
 
     }
 }
