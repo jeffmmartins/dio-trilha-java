@@ -1,7 +1,5 @@
 package Strategy;
 
 public interface Comportamento {
-    void mover(){
-
-    }
+    void mover();
 }
