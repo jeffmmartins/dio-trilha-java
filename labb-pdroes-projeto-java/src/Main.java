@@ -1,3 +1,4 @@
+import Facade.Facade;
 import Strategy.COmportamentoDefensivo;
 import Strategy.ComportamentoAgressiivo;
 import Strategy.ComportamentoNormal;
@@ -28,6 +29,10 @@ public class Main {
         robo.mover();
         robo.setComportamento(comportamentoAgressiivo);
         robo.mover();
+
+        // Facade
+        Facade facade = new Facade();
+        facade.migrarCliente("Jeff", "61920160");
 
 
     }
