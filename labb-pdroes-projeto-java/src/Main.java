@@ -11,6 +11,9 @@ public class Main {
 
         SingletonLazyHolder singletonLazyHolder = SingletonLazyHolder.getInstance();
 
+        //STRATEGY
+
+
 
     }
 }
