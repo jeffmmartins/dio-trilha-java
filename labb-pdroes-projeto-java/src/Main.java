@@ -1,3 +1,8 @@
+import Strategy.COmportamentoDefensivo;
+import Strategy.ComportamentoAgressiivo;
+import Strategy.ComportamentoNormal;
+import Strategy.Robo;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -13,6 +18,16 @@ public class Main {
 
         //STRATEGY
 
+        ComportamentoNormal comportamentoNormal = new ComportamentoNormal();
+        ComportamentoAgressiivo comportamentoAgressiivo = new ComportamentoAgressiivo();
+        COmportamentoDefensivo comportamentoDefensivo = new COmportamentoDefensivo();
+
+        Robo robo = new Robo();
+
+        robo.setComportamento(comportamentoNormal);
+        robo.mover();
+        robo.setComportamento(comportamentoAgressiivo);
+        robo.mover();
 
 
     }
