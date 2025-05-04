@@ -17,7 +17,7 @@ public class Account {
         @Column(scale = 13, precision = 2)
         private float balance;
 
-        @Column(scale = 13, precision = 2)
+        @Column(name = "aditional_limit", scale = 13, precision = 2)
         private float limit;
 
     public Long getId() {
