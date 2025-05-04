@@ -2,7 +2,9 @@ package me.dio.snatander.day.work._5.model;
 
 import jakarta.persistence.*;
 
-@Entity(name = "tab_user")
+import java.math.BigDecimal;
+
+@Entity(name = "tab_card")
 public class Card {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,7 +14,7 @@ public class Card {
     private String cardNumber;
 
     @Column(name = "available_limit", scale = 13, precision = 2)
-    private float cardLimit;
+    private BigDecimal cardLimit;
 
     public Long getId() {
         return id;
@@ -30,11 +32,11 @@ public class Card {
         this.cardNumber = cardNumber;
     }
 
-    public float getCardLimit() {
+    public BigDecimal getCardLimit() {
         return cardLimit;
     }
 
-    public void setCardLimit(float cardLimit) {
+    public void setCardLimit(BigDecimal cardLimit) {
         this.cardLimit = cardLimit;
     }
 }

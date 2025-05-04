@@ -2,7 +2,9 @@ package me.dio.snatander.day.work._5.model;
 
 import jakarta.persistence.*;
 
-@Entity(name = "tab_user")
+import java.math.BigDecimal;
+
+@Entity(name = "tab_account")
 
 public class Account {
         @Id
@@ -15,10 +17,10 @@ public class Account {
         private String agencia;
 
         @Column(scale = 13, precision = 2)
-        private float balance;
+        private BigDecimal balance;
 
         @Column(name = "aditional_limit", scale = 13, precision = 2)
-        private float limit;
+        private BigDecimal limit;
 
     public Long getId() {
         return id;
@@ -44,19 +46,19 @@ public class Account {
         this.agencia = agencia;
     }
 
-    public float getBalance() {
+    public BigDecimal getBalance() {
         return balance;
     }
 
-    public void setBalance(float balance) {
+    public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 
-    public float getLimit() {
+    public BigDecimal getLimit() {
         return limit;
     }
 
-    public void setLimit(float limit) {
+    public void setLimit(BigDecimal limit) {
         this.limit = limit;
     }
 }
