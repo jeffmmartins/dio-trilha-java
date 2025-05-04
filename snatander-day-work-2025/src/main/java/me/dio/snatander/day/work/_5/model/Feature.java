@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity
+@Entity(name = "tab_user")
 public class Feature {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
