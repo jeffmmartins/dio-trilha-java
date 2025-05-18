@@ -26,8 +26,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User create(User userToCreate) {
         // usuário foro  diferente de null e identificra que o usuário já existe, lança uma exceção;
-        if(userToCreate.getId() != null &&  userRepository.existsById(userToCreate.getId())){
-            throw new IllegalArgumentException("This User Id already exxist.");
+        if(userRepository.existsByAccountNumber(userToCreate.getAccount().getNumber())){
+            throw new IllegalArgumentException("This Account Nuumber  already exxist.");
         }
+        //salvar no userrepository, salva ou atualiza o objetono banco via JPA
+        return userRepository.save(userToCreate);
     }
 }
