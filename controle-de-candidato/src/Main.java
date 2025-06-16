@@ -4,7 +4,22 @@ import java.util.concurrent.ThreadLocalRandom;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-       analisarCandidato(3000.0);
+       selecaoCandidatos();
+    }
+
+    static void imprimirSelecionados() {
+        String [] candidatos = {"Jeff", "Martins", "Mendes", "Vera", "lucia"};
+        System.out.println("Imprimindo a lista de candidatos informando o indice dos elementos");
+
+        for (int indice = 0; indice < candidatos.length; indice++){
+            System.out.println("O candidato de numero : " + indice+1 + " é: " + candidatos[indice] );
+        }
+
+        System.out.println("Forma abreviado de interação for each");
+
+        for(String candidato : candidatos ){
+            System.out.println("o candidato selecionado foi: " + candidato);
+        }
     }
 
     static void selecaoCandidatos() {
@@ -20,7 +35,7 @@ public class Main {
                 System.out.println("O candidato " + " Foi selecionado para vaga");
                 candidatosSelecionados++;
             }
-            candidatoAtual++
+            candidatoAtual++;
         }
     }
 
