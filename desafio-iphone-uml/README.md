@@ -23,54 +23,62 @@ O componente Iphone centraliza as seguintes funcionalidades:
       UML - Diagrama de Classes
       O diagrama abaixo ilustra a estrutura do projeto. A classe Iphone implementa as três interfaces, cada uma representando uma das funcionalidades principais do dispositivo.
       
-   4. classDiagram
-        direction LR
+```mermaid
+classDiagram
+    direction LR
 
-      class Iphone {
-      +tocar()
-      +pausar()
-      +selecionarMusica(String musica)
-      +ligar(String numero)
-      +atender()
-      +iniciarCorreioVoz()
-      +exibirPagina(String url)
-      +adicionarNovaAba()
-      +atualizarPagina()
-      }
+    class Iphone {
+        +tocar()
+        +pausar()
+        +selecionarMusica(String musica)
+        +ligar(String numero)
+        +atender()
+        +iniciarCorreioVoz()
+        +exibirPagina(String url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
 
-      class ReprodutorMusical {
-      <<interface>>
-      +tocar()
-      +pausar()
-      +selecionarMusica(String musica)
-      }
+    class ReprodutorMusical {
+        <<interface>>
+        +tocar()
+        +pausar()
+        +selecionarMusica(String musica)
+    }
 
-      class AparelhoTelefonico {
-      <<interface>>
-      +ligar(String numero)
-      +atender()
-      +iniciarCorreioVoz()
-      }
+    class AparelhoTelefonico {
+        <<interface>>
+        +ligar(String numero)
+        +atender()
+        +iniciarCorreioVoz()
+    }
 
-      class NavegadorInternet {
-      <<interface>>
-      +exibirPagina(String url)
-      +adicionarNovaAba()
-      +atualizarPagina()
-      }
+    class NavegadorInternet {
+        <<interface>>
+        +exibirPagina(String url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
 
-      Iphone --|> ReprodutorMusical
-      Iphone --|> AparelhoTelefonico
-      Iphone --|> NavegadorInternet
+    Iphone --|> ReprodutorMusical
+    Iphone --|> AparelhoTelefonico
+    Iphone --|> NavegadorInternet
+```
 
 📁 Estrutura do Projeto
 O projeto está organizado nos seguintes arquivos Java:
 
 Interfaces:
-ReprodutorMusical.java: Contrato para as funcionalidades de música.
-AparelhoTelefonico.java: Contrato para as funcionalidades de telefone.
-NavegadorInternet.java: Contrato para as funcionalidades de navegação web.
+   ReprodutorMusical.java: Contrato para as funcionalidades de música.
+   
+   AparelhoTelefonico.java: Contrato para as funcionalidades de telefone.
+   
+   NavegadorInternet.java: Contrato para as funcionalidades de navegação web.
+   
 Classe Concreta:
-Iphone.java: Implementação das três interfaces, unificando os comportamentos.
+
+   Iphone.java: Implementação das três interfaces, unificando os comportamentos.
+   
 Classe de Execução:
-Main.java: Ponto de entrada para demonstrar o uso da classe Iphone.
+
+   Main.java: Ponto de entrada para demonstrar o uso da classe Iphone.
