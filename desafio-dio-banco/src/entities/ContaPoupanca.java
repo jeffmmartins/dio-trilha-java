@@ -4,7 +4,7 @@ public class ContaPoupanca {
 
     private int agencia;
     private int contaPoupança;
-    private int saldo;
+    private double saldo;
 
     public void sacar(){
 
