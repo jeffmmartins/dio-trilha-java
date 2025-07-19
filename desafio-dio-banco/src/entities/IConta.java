@@ -2,9 +2,9 @@ package entities;
 
 public interface IConta {
     //Todos os metodos de uma interface é público
-    default void sacar(){}
+    default void sacar(double valor){}
 
-    default void despositar(){}
+    default void despositar(double valor){}
 
-    default void transferir(){}
+    default void transferir(double valor, Conta contaDestino){}
 }

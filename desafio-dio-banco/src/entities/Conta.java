@@ -1,6 +1,6 @@
 package entities;
 
-public class Conta {
+public abstract class Conta implements IConta {
     private int agencia;
     private int conta;
     private double saldo;
