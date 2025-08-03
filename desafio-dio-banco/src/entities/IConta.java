@@ -7,4 +7,6 @@ public interface IConta {
     default void despositar(double valor){}
 
     default void transferir(double valor, Conta contaDestino){}
+
+    void imprimirExtrato();
 }
