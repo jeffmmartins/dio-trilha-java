@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User create(User userToCreate) {
-        // usuário foro  diferente de null e identificra que o usuário já existe, lança uma exceção;
+        // usuário for  diferente de null e identificar que o usuário já existe, lança uma exceção;
         if(userRepository.existsByAccountNumber(userToCreate.getAccount().getNumber())){
             throw new IllegalArgumentException("This Account Nuumber  already exist.");
         }
